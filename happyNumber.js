@@ -14,9 +14,7 @@
 // 12 + 02 + 02 = 1
 
 var isHappy = function(n) {
-    
     const seen = {}
-    
     while (n != 1) {
         if (n in seen) {
             return false 
