@@ -20,8 +20,6 @@ var groupAnagrams = function(strs) {
 
     strs.forEach(word => {
         let letters = word.split('').sort();
-        
-
         hash[letters] ? hash[letters].push(word) : hash[letters] = [word]
     });
     const keys = Object.keys(hash);
