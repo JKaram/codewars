@@ -10,8 +10,18 @@
 // If you have figured out the O(n) solution, try coding another solution using the divide and conquer approach, which is more subtle.
 
 
-var maxSubArray = function(nums) {
-    
+var maxSubArray = function (nums) {
+    let maxNumber = currentSum = 0; 
+    for (let num of nums) {
+        for (let i = 1; i < nums.length; i++) {
+            console.log(maxNumber, num , nums[i]);
+             currentSum = num + nums[i]
+            if (currentSum > maxNumber) {
+                maxNumber = currentSum
+            }
+        }
+    }
+    return maxNumber
 };
 
-console.log(maxSubArray([[-2,1,-3,4,-1,2,1,-5,4]]))
+console.log(maxSubArray([-2, 1, -3, 4, -1, 2, 1, -5, 4]))
