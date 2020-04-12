@@ -71,4 +71,4 @@ var backspaceCompare = function (S, T) {
     return newWord.join('') === newWord2.join('')
 };
 
-console.log(backspaceCompare("a##c","ad#c"));
+//console.log(backspaceCompare("a##c","ad#c"));
