@@ -25,9 +25,9 @@
 // 1 <= stones[i] <= 1000
 
 var lastStoneWeight = function (stones) {
-    stones.sort((a, b) => a - b);
     let length = stones.length
     if(length <= 1) return stones
+    stones.sort((a, b) => a - b);
     let replace = stones[length - 1] - stones[length - 2]
     stones = stones.slice(0 ,length - 2)
     stones.push(replace)
@@ -36,4 +36,4 @@ var lastStoneWeight = function (stones) {
     return stones
 };
 
-console.log(lastStoneWeight([8,10,4]), 'RETURN');
+console.log(lastStoneWeight([8,10,4])); //return [2]
