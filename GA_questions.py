@@ -92,3 +92,16 @@ print(sort_restaurants_by_rating(restaurants))
 # The max value of a downward facing quadratic such as y = -x^2 + 5x + 7 is found at the vertex.
 
 # x-value of vertex = -b/(2a) = -5/(2 * (-1)) = 5/2 = 2.5
+
+def calc_revenue(range_num):
+    max = 0
+    what_num = 0
+    for num in range(range_num):
+        num = num / 10 #convert to decimal
+        total = (-num ** 2) + (num * 5) + 7 #Revenue total
+        if max < total:
+            max = total
+            what_num = num
+    return what_num
+
+print(calc_revenue(10000))
