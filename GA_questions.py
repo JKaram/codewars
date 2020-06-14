@@ -81,6 +81,9 @@ print(sort_restaurants_by_rating(restaurants))
 # Suppose we are at that same company and REVENUE = -x^2 + 5x +7​. What value of x
 # maximizes revenue?
 
+# x-vertex = -5/(2 * (-1)) = 5/2 = 2.5
+# ANSWER 2.5
+
 def calc_revenue(range_num):
     max = 0
     what_num = 0
@@ -92,11 +95,4 @@ def calc_revenue(range_num):
             what_num = num
     return what_num
 
-print(calc_revenue(10000)) # 2.5
-
-
-# The max value of a downward facing quadratic such as y = -x^2 + 5x + 7 is found at the vertex.
-
-# x-value of vertex = -b/(2a) = -5/(2 * (-1)) = 5/2 = 2.5
-
-
+print(calc_revenue(100)) # 2.5
